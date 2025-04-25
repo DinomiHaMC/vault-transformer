@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конвертер валют</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Конвертер валют</h1>
+        <div class="converter">
+            <div class="input-group">
+                <input type="number" id="amount-input" placeholder="Сумма" value="1000" min="0" step="0.01">
+                <div class="custom-select">
+                    <select id="from-currency">
+                        <option value="RUB">Рубль (RUB)</option>
+                        <option value="USD">Доллар (USD)</option>
+                        <option value="EUR">Евро (EUR)</option>
+                        <option value="CNY">Юань (CNY)</option>
+                        <option value="KZT">Тенге (KZT)</option>
+                    </select>
+                </div>
+            </div>
+            
+            <button class="swap-btn" id="swap-btn">⇅</button>
+            
+            <div class="input-group">
+                <input type="number" id="result-output" placeholder="Результат" readonly>
+                <div class="custom-select">
+                    <select id="to-currency">
+                        <option value="USD">Доллар (USD)</option>
+                        <option value="EUR">Евро (EUR)</option>
+                        <option value="RUB">Рубль (RUB)</option>
+                        <option value="CNY">Юань (CNY)</option>
+                        <option value="KZT">Тенге (KZT)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="rate-info" id="rate-info">Загружаем курсы...</div>
+        <div class="update-time" id="update-time"></div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+  </html>
